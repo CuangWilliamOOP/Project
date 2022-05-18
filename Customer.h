@@ -6,7 +6,7 @@ class Customer:public Person{
 
 private:
 
-	Person person;
+	
 	int drunk_level = 0;
 	static const int max_drunk_level = 100;
 	int money = 250;
@@ -16,7 +16,6 @@ private:
 public:
 
 	Customer();
-	Customer(Person);
 	int buy_drink(int);
 	void greet();
 	int drink(int);

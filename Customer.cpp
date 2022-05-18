@@ -1,9 +1,7 @@
 #include "Customer.h"
 
 
-Customer::Customer(Person a){
-	person = a;
-}
+Customer::Customer(){}
 
 void Customer::greet(){
 	if(drunk_level > 50){

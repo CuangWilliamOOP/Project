@@ -3,13 +3,9 @@
 #include "Person.h"
 
 class Bartender:public Person{
-private:
-	Person person;
-
 public:
 
 	Bartender();
-	Bartender(Person);
 	void greet();
 	int add_drink();
 
