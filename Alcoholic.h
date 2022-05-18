@@ -9,6 +9,8 @@ private:
 
 public:
 	Alcoholic();
-	Alcoholic(std::string name);
+	Alcoholic(std::string, int, int, int, int);
+	int get_drunk_level();
 
 };
+#endif

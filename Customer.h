@@ -7,10 +7,10 @@ class Customer:public Person{
 private:
 
 	
-	int drunk_level = 0;
-	static const int max_drunk_level = 100;
-	int money = 250;
-	std::string sober_response[5]; 
+	 int drunk_level = 0;
+	 const int max_drunk_level = 100;
+	 int money = 250;
+	 std::string sober_response[5]; 
 
 
 public:

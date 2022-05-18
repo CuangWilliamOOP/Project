@@ -1,9 +1,7 @@
 #include "Person.h"
 
-Person::Person(){
-	name = nullptr;
-	age = nullptr;
-}
+Person::Person(){}
+	
 
 Person::Person(std::string name_, int age_){
 	*name = name_;

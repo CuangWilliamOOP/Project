@@ -21,9 +21,10 @@ int Customer::buy_drink(int price){
 	money = money - price;
 	if(money < 0){
 		money = money + price;
-		std::cout << "You do not have enough money to buy that drink" << std::endl;
+		std::cout << "You do not have enough money" << std::endl;
 		return money;
 	}else{
+		std::cout << "Enjor your drink!" << std::endl;
 		return money;
 	}
 	
@@ -51,3 +52,4 @@ int Customer::how_drunk(){
 int Customer::return_money(){
 	return money;
 }
+

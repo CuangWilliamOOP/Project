@@ -8,7 +8,7 @@ public:
 	Bartender();
 	Bartender(std::string, int);
 	void greet();
-	int add_drink();
+	int add_drink(std::string);
 
 
 

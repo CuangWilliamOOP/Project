@@ -1,18 +1,20 @@
 #ifndef DRINK_H
 #define DRINK_H
-#include "Bartender.h"
+#include <iostream>
+
 
 class Drink{
 
 public:
 
+
+	Drink();
 	int maximum;
 	int count;
 	int price;
-	Drink();
 	void get_count();
 	void drink_list();
-	void get_price();
+	int get_price();
 
 
 
