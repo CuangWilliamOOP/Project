@@ -6,16 +6,16 @@
 class Drink{
 
 public:
-
-
 	Drink();
 	int maximum;
 	int count;
 	int price;
-	void get_count();
+
+	int get_count();
 	void drink_list();
 	int get_price();
-
+	int brew();
+	int change_count();
 
 
 

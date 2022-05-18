@@ -4,15 +4,29 @@
 Customer::Customer(std::string name_, int age_){
 	*name = name_;
 	*age = age_;
-	
+
+
+	sober_response[0] = "You      : The weather is nice wouldn't you say?";
+	sober_response[1] = "You      : Ahhh, that tastes good";
+	sober_response[2] = "You      : This bar feels nice";
+	sober_response[3] = "You      : It must be fun to work as a bartender";
+	sober_response[4] = "You      : I haven't had a nice drink like this in a long time";
+
+
+	drunk_response[0] = "You      : Oh man, I don't feel so good";
+	drunk_response[1] = "You      : *delirious*";
+	drunk_response[2] = "You      : *sob* *sob*";
+	drunk_response[3] = "You      : Why did she leave me!?";
+	drunk_response[4] = "You      : Come on, pour some little more";
+
 }
 
 void Customer::greet(){
-	if(drunk_level > 50){
-		std::cout << "You: Give me more!" << std::endl;
-	}else if(drunk_level == 0){
-		std::cout << "You: The weather was nice wouldn't you say?" << std::endl;
-	}else if(drunk_level == 100){
+	if(drunk_level >= 75 and drunk_level < 100){
+		std::cout << drunk_response[(rand() % 5)] << std::endl;
+	}else if(drunk_level > 0 and drunk_level <75){
+		std::cout << sober_response[(rand() % 5)] << std::endl;
+	}else if(drunk_level >= 100){
 		std::cout << "You: *zzzz* " << std::endl;
 	}
 }
@@ -21,10 +35,10 @@ int Customer::buy_drink(int price){
 	money = money - price;
 	if(money < 0){
 		money = money + price;
-		std::cout << "You do not have enough money" << std::endl;
+		std::cout << "Bartender: You do not have enough money" << std::endl;
 		return money;
 	}else{
-		std::cout << "Enjor your drink!" << std::endl;
+		std::cout << "Bartender: Enjor your drink!" << std::endl;
 		return money;
 	}
 	
@@ -33,7 +47,6 @@ int Customer::buy_drink(int price){
 int Customer::drink(int x){
 	drunk_level = drunk_level + x;
 	if(drunk_level > 100){
-		drunk_level = drunk_level - x;
 		std::cout << "Whoops, you're too drunk to take anymore" << std::endl;
 		return drunk_level;
 	}else if(drunk_level < 0){

@@ -13,3 +13,19 @@ Alcoholic::Alcoholic(std::string name, int drunk_level, int count, int price, in
 int Alcoholic::get_drunk_level(){
 	return drunk_level;
 }
+
+std::string Alcoholic::get_name(){
+	return name;
+
+}
+
+int Alcoholic::change_price(int x){
+
+	price = price * x;
+	return price;
+}
+
+int Alcoholic::change_drunk_level(int x){
+	drunk_level = drunk_level * x;
+	return drunk_level;
+}

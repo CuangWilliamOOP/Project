@@ -5,16 +5,16 @@
 
 class Person{
 private:
-	Person(std::string name_, int age_);
+	Person(std::string name_, int age_); // Constructor
 public:
-	std::string *name = new std::string;
+	std::string *name = new std::string; 
 	int *age = new int;
 
-	Person();
-	std::string get_name();
-	int get_age();
-	void greet();
-	~Person();
+	Person(); // Default constructor
+	std::string get_name(); // Return person name
+	int get_age(); // return person age
+	void greet(); // displays greeting message
+	~Person(); // destructor
 
 };
 #endif

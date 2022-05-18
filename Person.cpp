@@ -9,7 +9,7 @@ Person::Person(std::string name_, int age_){
 }
 
 void Person::greet(){
-	std::cout << "Howdy m8" << std::endl;
+	std::cout << "G'day m8" << std::endl;
 }
 
 std::string Person::get_name(){
