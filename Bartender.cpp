@@ -1,11 +1,14 @@
 #include "Bartender.h"
 
 
-Bartender::Bartender(){}
+Bartender::Bartender(std::string name_, int age_){
+	*name = name_;
+	*age = age_;
+}
 
 
 void Bartender::greet(){
-	std::cout << "Hi, my name is "<< person.get_name()<< " What can I get for you?" << std::endl;
+	std::cout << "Hi, what can I get for you?" << std::endl;
 }
 
 int add_drink(){}

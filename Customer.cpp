@@ -1,7 +1,9 @@
 #include "Customer.h"
 
 
-Customer::Customer(){
+Customer::Customer(std::string name_, int age_){
+	*name = name_;
+	*age = age_;
 	
 }
 

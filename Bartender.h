@@ -6,6 +6,7 @@ class Bartender:public Person{
 public:
 
 	Bartender();
+	Bartender(std::string, int);
 	void greet();
 	int add_drink();
 

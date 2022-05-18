@@ -16,6 +16,7 @@ private:
 public:
 
 	Customer();
+	Customer(std::string, int);
 	int buy_drink(int);
 	void greet();
 	int drink(int);
