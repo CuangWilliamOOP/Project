@@ -10,7 +10,7 @@ public:
 	int *age = new int;
 
 	Person();
-	Person(std::string, int);
+	Person(std::string name_, int age_);
 	std::string get_name();
 	int get_age();
 	void greet();

@@ -4,10 +4,8 @@ Person::Person(){
 	name = nullptr;
 	age = nullptr;
 }
-
-Person::Person(std::string name_, int age_){
-	*name = name_;
-	*age = age_;
+std::string Person::set_name(std::string name_){
+	*name = name;
 }
 
 void Person::greet(){

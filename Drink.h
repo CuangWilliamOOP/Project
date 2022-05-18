@@ -3,15 +3,17 @@
 #include "Bartender.h"
 
 class Drink{
-private:
+
+public:
+
 	int maximum;
 	int count;
 	int price;
-
-public:
 	Drink();
 	void get_count();
 	void drink_list();
+	void get_price();
+
 
 
 

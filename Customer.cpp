@@ -1,7 +1,9 @@
 #include "Customer.h"
 
 
-Customer::Customer(){}
+Customer::Customer(){
+	
+}
 
 void Customer::greet(){
 	if(drunk_level > 50){
@@ -17,7 +19,7 @@ int Customer::buy_drink(int price){
 	money = money - price;
 	if(money < 0){
 		money = money + price;
-		std::cout << "You do not have enough money to buy that drink" << std::endl
+		std::cout << "You do not have enough money to buy that drink" << std::endl;
 		return money;
 	}else{
 		return money;
