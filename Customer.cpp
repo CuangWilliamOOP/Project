@@ -25,6 +25,7 @@ int Customer::buy_drink(int price){
 		return money;
 	}
 	
+}
 
 int Customer::drink(int x){
 	drunk_level = drunk_level + x;
