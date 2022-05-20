@@ -3,7 +3,7 @@
 
 Customer::Customer(std::string name_, int age_):Person(name_, age_){
 
-
+    // Sets the response array
 	sober_response[0] = "You      : The weather is nice wouldn't you say?";
 	sober_response[1] = "You      : Ahhh, that tastes good";
 	sober_response[2] = "You      : This bar feels nice";
@@ -20,6 +20,7 @@ Customer::Customer(std::string name_, int age_):Person(name_, age_){
 }
 
 void Customer::greet(){
+	// greet level depends on customer drunk_level
 	if(drunk_level >= 75 and drunk_level < 100){
 		std::cout << drunk_response[(rand() % 5)] << std::endl;
 	}else if(drunk_level >= 0 and drunk_level <75){
@@ -45,6 +46,7 @@ int Customer::buy_drink(int price){
 }
 
 int Customer::drink(int x){
+	// Increase drunk level
 	drunk_level = drunk_level + x;
 	if(drunk_level > 100){
 		return drunk_level;

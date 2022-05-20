@@ -13,6 +13,8 @@ void Menu::main_menu(){
 
 void Menu::module(int choice, Customer a, Bartender b){
 
+	// This the main module, every major calculation and user interaction happens here
+
 	this -> set_drinks(b);
 
 	while(choice == 1 || choice == 2 || choice < 0 || choice > 2 || choice == 0){
@@ -93,6 +95,7 @@ void Menu::module(int choice, Customer a, Bartender b){
 }
 
 void Menu::A_drink(){
+	// prints out the drinks 
 	for(int i = 0; i < num_drinks; i++){
 		std::cout << i+1<<". "<< list_of_drinks[i]->get_name() << " ($" << list_of_drinks[i]->get_price() << ")" << std::endl;
 	}
@@ -100,7 +103,8 @@ void Menu::A_drink(){
 }
 
 void Menu::set_drinks(Bartender){
-	// name, drunk_level, count, prize, maximum
+	
+	// This function is to set up the list_of_drink array
 	std::fstream drink_file("Drink.csv");
 	if (drink_file.is_open()){
 		std::string line;
