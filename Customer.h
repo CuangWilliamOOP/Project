@@ -10,7 +10,7 @@ private:
 	
 	 int drunk_level = 0;
 	 const int max_drunk_level = 100;
-	 int money = 200;
+	 int money = 50;
 	 std::string sober_response[5]; 
 	 std::string drunk_response[5];
 

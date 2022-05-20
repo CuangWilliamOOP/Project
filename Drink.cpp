@@ -1,8 +1,13 @@
 #include "Drink.h"
 
 
-Drink::Drink(){
-	
+Drink::Drink(){}
+
+Drink::Drink(std::string name, int count, int price, int maximum){
+    this->name = name;
+	this->count = count;
+	this->price= price;
+	this->maximum = maximum;
 }
 
 int Drink::get_count(){
@@ -19,9 +24,6 @@ int Drink::brew(){
 	return count;
 }
 
-int Drink::change_count(){
-	count = 0;
-}
 
 int Drink::get_drunk_level(){
 	return 0;

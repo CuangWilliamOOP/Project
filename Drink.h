@@ -5,23 +5,24 @@
 
 class Drink{
 
-public:
+protected:
 
-	Drink();
+	Drink(); // Default constructor
+    Drink(std::string, int, int, int); // Parameterized constructor that will accept name, count, prize, and maximum quantity
 	std::string name;
 	int maximum;
 	int count;
 	int price;
 
-	int get_count();
-	void drink_list();
-	int get_price();
-	int brew();
-	int change_count();
+public:
+	int get_count(); // Return the drink's quantity
+	int get_price(); // Return the drink's price
+	int brew(); // Allows bartender to create a drink/decrease the quantity by 1
 	
-	std::string get_name();
-	virtual int get_drunk_level();
-	virtual ~Drink();
+	std::string get_name(); // Return the name of the drink
+
+	virtual int get_drunk_level(); // Return drunk level
+	virtual ~Drink(); // Virtual destructor
 
 
 };
