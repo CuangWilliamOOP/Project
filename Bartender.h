@@ -8,12 +8,10 @@ private:
 	std::string drunk_response[5];
 public:
 
-	Bartender();
-	Bartender(std::string, int);
-	void greet(int);
-	int add_drink(std::string);
-
-
+	Bartender(); // Default constructor
+	Bartender(std::string, int); // Parameterized constructor
+	void greet(int); // Allows bartender to interact with customer according to their drunk level
+	void greet() override;
 
 };
 #endif

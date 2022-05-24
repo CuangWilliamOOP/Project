@@ -4,17 +4,18 @@
 
 
 class Person{
-private:
-	Person(std::string name_, int age_); // Constructor
-public:
-	std::string *name = new std::string; 
-	int *age = new int;
+protected:
+	Person();
+	Person(std::string name_, int age_);  // Constructor
+	std::string name;
+	int age;
 
-	Person(); // Default constructor
+public:
+
 	std::string get_name(); // Return person name
 	int get_age(); // return person age
-	void greet(); // displays greeting message
-	~Person(); // destructor
+	virtual void greet() = 0; // displays greeting message
+
 
 };
 #endif

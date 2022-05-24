@@ -1,9 +1,7 @@
 #include "Bartender.h"
 
 
-Bartender::Bartender(std::string name_, int age_){
-	*name = name_;
-	*age = age_;
+Bartender::Bartender(std::string name_, int age_):Person(name_, age_){
 
 	sober_response[0] = "Bartender: That it is...";
 	sober_response[1] = "Bartender: Couldn't agree more";
@@ -24,7 +22,7 @@ Bartender::Bartender(std::string name_, int age_){
 void Bartender::greet(int drunk_level){
 	if(drunk_level >= 75 and drunk_level < 100){
 		std::cout << drunk_response[(rand() % 5)] << std::endl;
-	}else if(drunk_level > 0 and drunk_level <75){
+	}else if(drunk_level >= 0 and drunk_level <75){
 		std::cout << sober_response[(rand() % 6)] << std::endl;
 	}else if(drunk_level >= 100){
 		std::cout << "Bartender: *sigh* alright " << std::endl;
@@ -32,4 +30,7 @@ void Bartender::greet(int drunk_level){
 
 }
 
-int add_drink(){}
+
+void Bartender::greet(){
+	std::cout << "Here you go sir!" << std::endl;
+}
