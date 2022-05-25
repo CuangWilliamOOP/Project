@@ -19,7 +19,7 @@ public:
 	void set_drinks(Bartender); // Allows the bartender to prepare the drink/ fill in list_of_drinks array. Database of drink is in Drink.csv
 	void set_food(Bartender); // Allows the bartender to prepare the food/fill in list_of_food array.
 	void main_menu(); // A statically written message for customer to interact with
-	void module(Customer, Bartender); // Where all main calculation and interaction happens, the parameter will receive a response, a customer and a bartender
+	void module(Customer, Bartender); // Where all main calculation and interaction happens, the parameter will receive a customer and a bartender
 	void starting_module();
 	void A_drink(); // Print out the list of drinks 
 	void A_food(); // Print out the list of food
@@ -30,7 +30,7 @@ public:
 	int prompt_age(); // Asks the user for age
 	bool isValidName(std::string); // Validate name input
 	std::string prompt_name(); // Asks user for name
-    ~Menu(); // Destructor to delete list_of_drinks
+        ~Menu(); // Destructor to delete list_of_drinks
 
 
 };
