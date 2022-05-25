@@ -14,7 +14,7 @@ public:
 
 	std::string get_name(); // Return person name
 	int get_age(); // return person age
-	virtual void greet() = 0; // displays greeting message
+	virtual void greet() = 0; // Pure virtual function for greeting message
 
 
 };
