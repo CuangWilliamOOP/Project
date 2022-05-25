@@ -27,8 +27,8 @@ public:
 	void essential_info(Customer); // Output user relevant information
 	int validate(int); // Makes sure user input only integers
 	int validate_range(int, int, int); // Makes sure user input is within range
-	int prompt_age();
-	std::string prompt_name();
+	int prompt_age(); // Asks the user for age
+	std::string prompt_name(); // Asks user for name
     ~Menu(); // Destructor to delete list_of_drinks
 
 

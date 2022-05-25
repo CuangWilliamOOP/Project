@@ -122,7 +122,7 @@ void Menu::A_drink(){
 	for(int i = 0; i < num_drinks; i++){
 		std::cout << i+1<<". "<< list_of_drinks[i]->get_name() << " ($" << list_of_drinks[i]->get_price() << ")" << " -" << list_of_drinks[i]->get_count() << " left" << std::endl;
 	}
-	std:: cout << "Choose your drink with numbers on the list: ";
+	std:: cout << "Choose your drink with numbers on the list or 0 to exit: ";
 }
 
 void Menu::A_food(){
@@ -130,7 +130,7 @@ void Menu::A_food(){
 	for(int i = 0; i < 3; i++){
 		std::cout << i+1<<". "<< list_of_food[i].get_name() << " ($" << list_of_food[i].get_price() << ")" << "-" << list_of_food[i].get_count() << " left" << std::endl;
 	}
-	std:: cout << "Choose your food with numbers on the list: ";
+	std:: cout << "Choose your food with numbers on the list or 0 to exit: ";
 
 }
 
