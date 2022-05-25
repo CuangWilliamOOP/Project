@@ -54,7 +54,7 @@ void Menu::module(Customer a, Bartender b){
 						break;
 					}else{
 						std::cout << "Bartender: We ran out of " << list_of_drinks[general_response-1]->get_name() << std::endl;
-						list_of_drinks[general_response-1].change_count();
+						list_of_drinks[general_response-1]->change_count();
 					}
 					break;
 				}
