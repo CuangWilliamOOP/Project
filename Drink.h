@@ -16,10 +16,10 @@ protected:
 
 public:
 
-	int get_count(); // Return the drink's quantity
-	int get_price(); // Return the drink's price
+	int get_count(); // Return drink's quantity
+	int get_price(); // Return drink's price
 	int brew(); // Allows bartender to create a drink/decrease the quantity by 1
-	void change_count(); // Makes sure drink that are empty will not get deducted to negative quantity;
+	void change_count(); // Makes sure drinks that are empty will not get deducted to negative quantity;
 	
 	std::string get_name(); // Return the name of the drink
 

@@ -1,6 +1,10 @@
 #include "Menu.h"
 #include <fstream>
 #include <sstream>
+#include <algorithm>
+#include <cctype>
+#include <string>
+
 
 Menu::Menu(){}
 void Menu::main_menu(){
@@ -201,9 +205,30 @@ std::string Menu::prompt_name(){
 	std::string name;
 	std::cout << "Please enter your name: ";
 	std::cin >> name;
-	return name;
 
+	while(this -> isValidName(name) == 0){
+		std::cout << "Invalid name, try again: ";
+		std::cin >> name;
+	}
+
+	if(this->isValidName(name) == 1){
+		return name;
+	}
 }
+
+bool Menu::isValidName(std::string name){
+	bool correct = false;
+
+	for(int i = 0; i < name.length(); i++){
+		if((name[i] >= 65 and name[i] <= 90) or (name[i] >= 97 and name[i] <= 122) or name[i] == 32){
+			correct = true;
+		}else{
+			return false;
+		}
+	}
+	return correct;
+}
+
 int Menu::prompt_age(){
 	int age_;
 	std::cout << "Please enter your age: ";

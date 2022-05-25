@@ -28,6 +28,7 @@ public:
 	int validate(int); // Makes sure user input only integers
 	int validate_range(int, int, int); // Makes sure user input is within range
 	int prompt_age(); // Asks the user for age
+	bool isValidName(std::string); // Validate name input
 	std::string prompt_name(); // Asks user for name
     ~Menu(); // Destructor to delete list_of_drinks
 

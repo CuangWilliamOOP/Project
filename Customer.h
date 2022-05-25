@@ -18,7 +18,7 @@ public:
 	Customer(); // Default constructor
 	Customer(std::string, int); // Parameterized constructor that accepts name and age
 	int buy_drink(int); // Take customer money according to the price of the object they buy
-	int buy_food(int);
+	int buy_food(int); // Take customer money from the food they buy
 	void greet() override; // Greeting messages
 	int drink(int); // Modify value of drunk level
 	int eat(int); // Modify value of hunger_level
