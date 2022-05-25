@@ -9,6 +9,6 @@ private:
 public:
 	Alcoholic(); // Default constructor
 	Alcoholic(std::string, int, int, int, int); // Parameterized constructor that will accept name, drunk level, quantity, price, and maximum quantity
-	int get_drunk_level() override;  // Return drunk level inherited by Drink class
+	int get_info_level() override;  // Return drunk level inherited by Drink class
 };
 #endif

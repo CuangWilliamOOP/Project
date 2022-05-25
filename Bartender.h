@@ -11,6 +11,7 @@ public:
 	Bartender(); // Default constructor
 	Bartender(std::string, int); // Parameterized constructor
 	void greet(int); // Allows bartender to interact with customer according to their drunk level
+	void greet() override; // override virtual function from person
 
 };
 #endif

@@ -7,11 +7,6 @@ Alcoholic::Alcoholic(std::string name, int drunk_level, int count, int price, in
 	
 }
 
-int Alcoholic::get_drunk_level(){
+int Alcoholic::get_info_level(){
 	return drunk_level;
 }
-
-
-
-
-

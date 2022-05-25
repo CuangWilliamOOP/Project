@@ -30,3 +30,7 @@ void Bartender::greet(int drunk_level){
 
 }
 
+
+void Bartender::greet(){
+	std::cout << "Here you go sir!" << std::endl;
+}

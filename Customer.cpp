@@ -45,6 +45,19 @@ int Customer::buy_drink(int price){
 	
 }
 
+int Customer::buy_food(int price){
+	money = money - price;
+	if(money < 0){
+		money = money + price;
+		std::cout << "Bartender: You do not have enough money" << std::endl;
+		return money;
+	}else{
+		std::cout << "Bartender: Enjor your food!" << std::endl;
+		return money;
+	}
+	
+}
+
 int Customer::drink(int x){
 	// Increase drunk level
 	drunk_level = drunk_level + x;
@@ -59,8 +72,26 @@ int Customer::drink(int x){
 	}
 }
 
+int Customer::eat(int x){
+	// Increase drunk level
+	hunger_level =  hunger_level - x;
+	if(hunger_level < 75 and hunger_level > 0){
+		return hunger_level;
+	}else if(hunger_level <= 0){
+		hunger_level = 0;
+		std::cout << "You      : Oh my, I'm so full" << std::endl;
+		return hunger_level;
+	}else{
+		return hunger_level;
+	}
+}
+
 int Customer::how_drunk(){
 	return drunk_level;
+}
+
+int Customer::how_hungry(){
+	return hunger_level;
 }
 
 int Customer::return_money(){

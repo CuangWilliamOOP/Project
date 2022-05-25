@@ -15,13 +15,15 @@ protected:
 	int price;
 
 public:
+
 	int get_count(); // Return the drink's quantity
 	int get_price(); // Return the drink's price
 	int brew(); // Allows bartender to create a drink/decrease the quantity by 1
+	void change_count(); // Makes sure drink that are empty will not get deducted to negative quantity;
 	
 	std::string get_name(); // Return the name of the drink
 
-	virtual int get_drunk_level(); // Return drunk level
+	virtual int get_info_level(); // Return info level
 	virtual ~Drink(); // Virtual destructor
 
 
